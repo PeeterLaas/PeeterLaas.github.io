@@ -7,9 +7,9 @@ baseurl: ""
 url: "https://peeter.laas.github.io" # Best practice: Keep URL lowercase
 
 # ----------------------- #
-#     Minima Specific     #
+#     Slate Specific     #
 # ----------------------- #
-remote_theme: poole/hyde
+remote_theme: pages-themes/slate@v0.2.0
 
 # CRITICAL FOR MINIMA:
 # These must be here (at the top level) for the footer icons to appear.
