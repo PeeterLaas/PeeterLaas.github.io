@@ -1,0 +1,63 @@
+---
+---
+
+/* 1. Import the Hyde theme first so we keep the layout */
+@import "jekyll-theme-hyde";
+
+/* 2. Dark Mode Overrides */
+
+/* Change the main white background to dark grey */
+body {
+  background-color: #202020; /* Matches the default sidebar color */
+  color: #e8e8e8;            /* Light grey text */
+}
+
+/* Fix the links so they are visible on dark background */
+a {
+  color: #51a7e8; /* Light blue */
+}
+a:visited {
+  color: #c58af9; /* Light purple */
+}
+a:hover {
+  text-decoration: underline;
+  color: #8ac6f2;
+}
+
+/* Make headings (H1, H2, etc) bright white */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+/* Sidebar adjustments */
+.sidebar {
+  background-color: #1a1a1a; /* Make sidebar slightly darker than body for contrast */
+}
+
+.sidebar-about h1 {
+  color: #ffffff; /* Ensure your name in sidebar is white */
+}
+
+.sidebar-nav-item {
+  color: #a0a0a0; /* Sidebar links */
+}
+
+.sidebar-nav-item.active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Darken code blocks and tables */
+pre, code {
+  background-color: #2d2d2d;
+  color: #e8e8e8;
+  border: 1px solid #444;
+}
+
+table th {
+  background-color: #333;
+  color: #fff;
+}
+table tr:nth-child(2n) {
+  background-color: #2a2a2a;
+}
