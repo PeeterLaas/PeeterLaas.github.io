@@ -1,7 +1,7 @@
 # ----------------------- #
 #      Site Settings      #
 # ----------------------- #
-title: Work and Play with Peeter Laas
+title: Peeter Laas - working on the code of life
 email: peeter.laas@ut.ee
 description: >-
   Academic portfolio and personal homepage. Updates on my open source projects,
@@ -24,10 +24,7 @@ github_username: Peeter.Laas  # Assumed from your URL; check if this is your exa
 #    Author (Meta Data)   #
 # ----------------------- #
 # This is used by the SEO plugin for Google/Twitter cards
-author:
-  name: Peeter Laas
-  email: peeter.laas@ut.ee
-  twitter: DrPeeterLaas
+author: Peeter Laas
 
 # ----------------------- #
 #      Build Settings     #
