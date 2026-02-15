@@ -58,4 +58,4 @@ I teach the master-level course **Modern Methods in Molecular Ecology** at Talli
 
 ---
 
-[See my full CV (PDF)](assets/CV_Peeter_Laas.pdf) | [Google Scholar](https://scholar.google.com) | [ETIS Profile](https://www.etis.ee)
+[See my full CV (PDF)](assets/CV_2026-02-15.pdf) | [Google Scholar](https://scholar.google.com) | [ETIS Profile](https://www.etis.ee)
