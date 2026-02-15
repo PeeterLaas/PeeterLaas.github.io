@@ -1,9 +1,7 @@
 ---
 layout: home
-title: Home
+title: Welcome
 ---
-
-# Welcome
 
 I am a **Research Fellow in Molecular Ecology** at the [University of Tartu](https://ut.ee) and a Research Fellow at the **FinEst Centre for Smart Cities** (Tallinn University of Technology).
 
