@@ -4,7 +4,7 @@ title: Welcome
 ---
 
 <img src="assets/images/20250917_ManaKaasik_Linnasulps-10.jpg" alt="Laboratory view" 
-     style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+     style="width: 100%; height: 500px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
 
 I am a **Research Fellow in Molecular Ecology** at the [University of Tartu](https://ut.ee) and a Research Fellow at the **FinEst Centre for Smart Cities** (Tallinn University of Technology).
 
