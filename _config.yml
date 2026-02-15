@@ -1,0 +1,56 @@
+# ----------------------- #
+#      Site Settings      #
+# ----------------------- #
+title: Work and Play with Peeter Laas
+email: peeter.laas@ut.ee
+description: >-
+  Academic portfolio and personal homepage. Updates on my open source projects,
+  technology writings, and experiments.
+baseurl: ""
+url: "https://peeter.laas.github.io" # Best practice: Keep URL lowercase
+
+# ----------------------- #
+#     Minima Specific     #
+# ----------------------- #
+theme: minima
+
+# CRITICAL FOR MINIMA:
+# These must be here (at the top level) for the footer icons to appear.
+# Note: Use just the username, not the full URL.
+twitter_username: DrPeeterLaas
+github_username: Peeter.Laas  # Assumed from your URL; check if this is your exact GitHub user handle.
+
+# ----------------------- #
+#    Author (Meta Data)   #
+# ----------------------- #
+# This is used by the SEO plugin for Google/Twitter cards
+author:
+  name: Peeter Laas
+  email: peeter.laas@ut.ee
+  twitter: DrPeeterLaas
+
+# ----------------------- #
+#      Build Settings     #
+# ----------------------- #
+permalink: /:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  smart_quotes: ["lsquo", "rsquo", "ldquo", "rdquo"]
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+
+# ----------------------- #
+#        Plugins          #
+# ----------------------- #
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gist
