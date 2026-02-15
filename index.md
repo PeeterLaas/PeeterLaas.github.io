@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Welcome
+image: assets/images/20250917_ManaKaasik_Linnasulps-10.jpg
 ---
 
 <img src="assets/images/20250917_ManaKaasik_Linnasulps-10.jpg" alt="Laboratory view" 
