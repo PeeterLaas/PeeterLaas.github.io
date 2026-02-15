@@ -1,9 +1,9 @@
 ---
 layout: home
-title: Welcome
+title: Home
 image: assets/images/20250917_ManaKaasik_Linnasulps-10.jpg
 ---
-
+# Welcome
 <img src="assets/images/20250917_ManaKaasik_Linnasulps-10.jpg" alt="Laboratory view" 
      style="width: 100%; height: 500px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
 
