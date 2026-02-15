@@ -9,19 +9,19 @@ order: 1
 
 * **PhD in Gene Technology (2016)**
     *Tallinn University of Technology*
-    [cite_start]Thesis: "Spatiotemporal Niche-Partitioning of Bacterioplankton Community across Environmental Gradients in the Baltic Sea"[cite: 21].
+    Thesis: "Spatiotemporal Niche-Partitioning of Bacterioplankton Community across Environmental Gradients in the Baltic Sea".
 * **MSc in Gene Technology (2010)**
-    [cite_start]*University of Tartu*[cite: 42].
+    *University of Tartu*
 * **BSc in Gene Technology (2008)**
-    [cite_start]*University of Tartu*[cite: 43].
+    *University of Tartu*
 
 ## Key Collaborations & Positions
 
 * **University of Tartu** (2021–Present)
-    [cite_start]Research Fellow in Molecular Ecology, Institute of Technology[cite: 14].
+    Research Fellow in Molecular Ecology, Institute of Technology
 * **TalTech FinEst Centre for Smart Cities** (2025–Present)
-    [cite_start]Research Fellow[cite: 14].
+    Research Fellow
 * **Leibniz Institute for Baltic Sea Research Warnemünde** (2016–2017)
-    [cite_start]Post-Doc Researcher[cite: 16].
+    Post-Doc Researcher
 * **University of Florida** (2017–2020)
-    [cite_start]Post-Doc at Fort Lauderdale Research and Education Center[cite: 16].
+   Post-Doc at Fort Lauderdale Research and Education Center
