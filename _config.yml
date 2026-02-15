@@ -1,18 +1,15 @@
 # ----------------------- #
 #      Site Settings      #
 # ----------------------- #
-title: Peeter Laas - working on the code of life
-email: peeter.laas@ut.ee
-description: >-
-  Academic portfolio and personal homepage. Updates on my open source projects,
-  technology writings, and experiments.
+title: Peeter Laas
+description: Research Fellow in Molecular Ecology
 baseurl: ""
 url: "https://peeter.laas.github.io" # Best practice: Keep URL lowercase
 
 # ----------------------- #
 #     Minima Specific     #
 # ----------------------- #
-theme: minima
+theme: jekyll-theme-hyde
 
 # CRITICAL FOR MINIMA:
 # These must be here (at the top level) for the footer icons to appear.
@@ -51,3 +48,12 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
+
+# Defining the exact order of the navigation menu
+header_pages:
+  - index.md
+  - current-work.md
+  - education.md
+  - events.md
+  - gallery.md
+  - past-work.md
