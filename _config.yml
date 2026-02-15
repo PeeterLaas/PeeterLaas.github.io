@@ -9,7 +9,7 @@ url: "https://peeter.laas.github.io" # Best practice: Keep URL lowercase
 # ----------------------- #
 #     Minima Specific     #
 # ----------------------- #
-theme: jekyll-theme-hyde
+remote_theme: poole/hyde
 
 # CRITICAL FOR MINIMA:
 # These must be here (at the top level) for the footer icons to appear.
@@ -48,6 +48,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-remote-theme
 
 # Defining the exact order of the navigation menu
 header_pages:
