@@ -2,7 +2,7 @@
 layout: page
 title: Current Work
 permalink: /current-work/
-order: 3
+order: 2
 ---
 
 ## UrbanSplash: Smart City Water (2024–2027)
