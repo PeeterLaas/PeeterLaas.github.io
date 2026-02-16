@@ -2,14 +2,14 @@
 #      Site Settings      #
 # ----------------------- #
 title: Peeter Laas
-description: Research Fellow in Molecular Ecology
+description: Working on the Code of Life
 baseurl: ""
 url: "https://peeter.laas.github.io" # Best practice: Keep URL lowercase
 
 # ----------------------- #
 #     Slate Specific     #
 # ----------------------- #
-remote_theme: pages-themes/slate@v0.2.0
+remote_theme: pages-themes/slate
 
 # CRITICAL FOR MINIMA:
 # These must be here (at the top level) for the footer icons to appear.
@@ -44,17 +44,18 @@ exclude:
 #        Plugins          #
 # ----------------------- #
 plugins:
+  - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-remote-theme
+
 
 # Defining the exact order of the navigation menu
 header_pages:
   - index.md
   - current-work.md
   - education.md
-  - events.md
+  - events-admin.md
   - gallery.md
   - past-work.md
