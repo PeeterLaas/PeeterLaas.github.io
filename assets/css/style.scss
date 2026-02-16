@@ -1,4 +1,63 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+/* Import the default Minima theme first */
+@import "minima";
+
+/* --- DARK MODE OVERRIDES --- */
+
+body {
+  background-color: #181818; /* Dark Grey Background */
+  color: #e0e0e0;            /* Light Grey Text */
+}
+
+/* Links */
+a {
+  color: #64b5f6; /* Light Blue for links */
+}
+a:visited {
+  color: #ba68c8; /* Purple for visited links */
+}
+a:hover {
+  color: #4dd0e1; /* Cyan for hover */
+}
+
+/* Header (Navigation Bar) */
+.site-header {
+  background-color: #212121;
+  border-bottom: 1px solid #333;
+}
+
+.site-title, .site-title:visited {
+  color: #ffffff;
+}
+
+.site-nav .page-link {
+  color: #e0e0e0;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #212121;
+  border-top: 1px solid #333;
+}
+
+/* Code Blocks (for your research data) */
+pre, code {
+  background-color: #263238;
+  color: #eceff1;
+  border: 1px solid #37474f;
+  border-radius: 3px;
+}
+
+/* Tables */
+table {
+  color: #e0e0e0;
+}
+th {
+  background-color: #333;
+  color: #fff;
+}
+tr:nth-child(even) {
+  background-color: #262626; /* Alternating row color */
+}
