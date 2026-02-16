@@ -9,7 +9,7 @@ url: "https://peeter.laas.github.io" # Best practice: Keep URL lowercase
 # ----------------------- #
 #     Slate Specific     #
 # ----------------------- #
-remote_theme: pages-themes/slate
+remote_theme: minima
 
 # CRITICAL FOR MINIMA:
 # These must be here (at the top level) for the footer icons to appear.
