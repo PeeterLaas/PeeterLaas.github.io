@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home
+title: 
 image: assets/images/20250917_ManaKaasik_Linnasulps-10.jpg
 ---
 # Welcome
