@@ -4,12 +4,12 @@
 title: Peeter Laas
 description: Working on the Code of Life
 baseurl: ""
-url: "https://peeter.laas.github.io" # Best practice: Keep URL lowercase
+url: "https://peeterlaas.github.io" # Best practice: Keep URL lowercase
 
 # ----------------------- #
 #     Slate Specific     #
 # ----------------------- #
-remote_theme: minima
+theme: jekyll-theme-minimal
 
 # CRITICAL FOR MINIMA:
 # These must be here (at the top level) for the footer icons to appear.
@@ -38,13 +38,14 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/
-
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 # ----------------------- #
 #        Plugins          #
 # ----------------------- #
 plugins:
-  - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
@@ -59,3 +60,6 @@ header_pages:
   - events-admin.md
   - gallery.md
   - past-work.md
+
+# Configuration for the theme (if supported by jekyll-theme-minimal)
+show_downloads: true # Adds 'Download .zip' buttons to the header
