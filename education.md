@@ -2,7 +2,7 @@
 layout: page
 title: Education & Collaborations
 permalink: /education/
-order: 1
+order: 3
 ---
 
 ## Education
