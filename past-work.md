@@ -2,7 +2,7 @@
 layout: page
 title: Past Work
 permalink: /past-work/
-order: 2
+order: 6
 ---
 
 ## COVID-19 Wastewater Surveillance (2020–2023)
