@@ -4,7 +4,7 @@ title: Home
 image: assets/images/20250917_ManaKaasik_Linnasulps-10.jpg
 ---
 # Welcome
-<img src="assets/images/20250917_ManaKaasik_Linnasulps-10.jpg" alt="Laboratory view" 
+<img src="assets/images/20250917_ManaKaasik_Linnasulps-10.jpg" alt="Laboratory view" id="welcome-image"
      style="width: 100%; height: 500px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
 
 I am a **Research Fellow in Molecular Ecology** at the [University of Tartu](https://ut.ee) and a Research Fellow at the **FinEst Centre for Smart Cities** (Tallinn University of Technology).
@@ -13,19 +13,65 @@ My research focuses on **environmental microbiology** and **molecular ecology**,
 
 ### 🏆 Research Highlights
 
-My work in establishing the nationwide **SARS-CoV-2 wastewater monitoring system** was recognized with:
-* **The University of Tartu Contribution to Society Award** (2021)
-* **Tartu Deed of the Year** nominee (2021) for the "essential initiative for the whole of Estonia."
+
+
+My research journey spans diverse fields, with a strong focus on **environmental microbiology** and **molecular ecology**. I am particularly interested in how microbial communities interact with their environments, from vast marine systems like the Baltic Sea to critical urban infrastructure such as wastewater treatment plants.
+
+
+
+Key areas of my work include:
+
+
+
+*   **Genetic Engineering:** Serving as a national expert on GMOs and a member of the Estonian Gene Technology Committee.
+
+*   **Molecular Diagnostics:** Developing and implementing wastewater-based surveillance systems for SARS-CoV-2 (recognized with the University of Tartu Contribution to Society Award 2021 and Tartu Deed of the Year nominee 2021), conducting research on complex biofilms, antimicrobial resistance transmission in a 'One Health' context, and genomic microbial source tracking for bathing water quality assessment.
+
+*   **Microbial Ecology:** Investigating spatiotemporal dynamics of bacterioplankton communities in various ecosystems, including the anoxic "dead zones" of the Baltic Sea, the Florida Coastal Everglades, and the Keys Archipelago.
+
+*   **Genetic Diagnostics of Fecal Contamination:** Currently, my main research focus is on this area for Bathing Water Quality assessment.
+
+
 
 ---
 
+
+
 ### 🔬 Current Research Focus
 
+
+
 **Urban & Environmental Microbiology**
+
 Currently, I am working on the **UrbanSplash pilot project** as part of the FinEst Centre for Smart Cities (2024–2027). We are developing smart city solutions to monitor and manage urban water environments effectively.
 
+
+
 **Microplastics & Biofilms**
+
 I am also investigating the **impact of marine microplastic-associated biofilms** on environmental and human health (2021–2026). This project explores how "plastispheres" act as vectors for microbial colonization in marine systems.
+
+
+
+---
+
+
+
+### 💻 Expertise & Technical Skills
+
+
+
+I possess strong bioinformatics and technical skills, honed through sysadmin roles and international collaborations:
+
+
+
+*   **Bioinformatics:** R programming, Nextflow, Singularity, Docker, CONDA-based pipelines and solutions.
+
+*   **System Administration:** Experience with Linux servers, cloud service-based environments, and HPC clusters.
+
+*   **International Collaboration:** Worked in international work groups in the USA, Germany, Lithuania, Estonia, and collaborated closely with colleagues in the UK, Sweden, Norway, and Finland.
+
+
 
 ---
 
