@@ -586,6 +586,68 @@
   }
   .gallery-placeholder .icon { font-size: 2rem; opacity: 0.3; }
 
+  /* ───── GALLERY GRID ───── */
+  .gallery-group { margin-bottom: 2.5rem; }
+  .gallery-group-label {
+    font-family: var(--mono);
+    font-size: 0.67rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .gallery-group-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 0.6rem;
+  }
+  .gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+  .gallery-item:hover img { transform: scale(1.05); filter: brightness(0.6); }
+  .gallery-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 0.5rem 0.75rem;
+    background: linear-gradient(to top, rgba(13,15,20,0.9), transparent);
+    font-size: 0.67rem;
+    color: var(--text);
+    font-family: var(--mono);
+    opacity: 0;
+    transform: translateY(3px);
+    transition: opacity 0.25s, transform 0.25s;
+    pointer-events: none;
+    line-height: 1.4;
+  }
+  .gallery-item:hover .gallery-caption { opacity: 1; transform: translateY(0); }
+  .project-video {
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 1.25rem;
+    border: 1px solid var(--border);
+    display: block;
+  }
+
   /* ───── SUBSECTION HEADINGS ───── */
   .sub-heading {
     font-family: var(--mono);
@@ -862,6 +924,9 @@
         SARS-CoV-2 from wastewater samples at national scale. Nominated for "Tartu Deed of the Year".
       </p>
       <div class="proj-badge">💶 ~1.1M EUR · Ministry of Education and Research</div>
+      <video class="project-video" autoplay muted loop playsinline>
+        <source src="assets/images/Past-work-WBE-myrendered%20animation.mp4" type="video/mp4">
+      </video>
     </div>
 
     <div class="project-card">
@@ -1466,15 +1531,160 @@
       <h2>Research in Pictures</h2>
     </div>
 
-    <div class="gallery-placeholder">
-      <span class="icon">📷</span>
-      Fieldwork — Baltic Sea sampling
-      <span style="font-size:0.65rem; opacity:0.5; margin-top:0.25rem">Image coming soon</span>
+    <div class="gallery-group">
+      <div class="gallery-group-label">PhD Research — Baltic Sea (2010–2016)</div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/PhD/SALME1.jpg" alt="Research vessel SALME">
+          <div class="gallery-caption">Research vessel SALME, Baltic Sea</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/PhD/SALMEgood.jpg" alt="Research vessel SALME">
+          <div class="gallery-caption">Research vessel SALME</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/PhD/SALME-rough.jpg" alt="Rough seas on SALME">
+          <div class="gallery-caption">Rough seas, SALME</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/PhD/filtration-2011-05-04.jpg" alt="Water sample filtration 2011">
+          <div class="gallery-caption">Water sample filtration, 2011</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/PhD/filtration-2011-05-04selfie.jpg" alt="Field work, Gulf of Finland 2011">
+          <div class="gallery-caption">Fieldwork, Gulf of Finland, 2011</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/PhD/FLOWcytometry.jpg" alt="Flow cytometry lab">
+          <div class="gallery-caption">Flow cytometry lab</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/PhD/FLOWcytometry2.jpg" alt="Flow cytometry analysis">
+          <div class="gallery-caption">Flow cytometry analysis</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/PhD/OSOON2016-graph.jpg" alt="Bacterioplankton data, Baltic Sea 2016">
+          <div class="gallery-caption">Bacterioplankton data, Baltic Sea 2016</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-placeholder">
-      <span class="icon">🔬</span>
-      Wastewater analysis — SARS-CoV-2 sequencing
-      <span style="font-size:0.65rem; opacity:0.5; margin-top:0.25rem">Image coming soon</span>
+
+    <div class="gallery-group">
+      <div class="gallery-group-label">MESOAQUA Mesocosm Experiment, Greece (2010)</div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/MESOAQUA-experiment-2010/MESOCOSM2010group.jpg" alt="Research team, HCMR Greece">
+          <div class="gallery-caption">Research team, HCMR Greece</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/MESOAQUA-experiment-2010/MESOCOSM2010ship.jpg" alt="Research vessel, MESOAQUA">
+          <div class="gallery-caption">Research vessel, MESOAQUA experiment</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/MESOAQUA-experiment-2010/MESOCOSM2010exp.jpg" alt="Mesocosm experiment setup">
+          <div class="gallery-caption">Mesocosm experiment setup</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/MESOAQUA-experiment-2010/MESOCOSMexp2010.jpg" alt="Mesocosm experiment, HCMR Greece">
+          <div class="gallery-caption">Mesocosm experiment, HCMR Greece</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-group">
+      <div class="gallery-group-label">Postdoc — IOW Warnemünde (2016–2017)</div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/Postoc1-IOW2016/IOW-germanyAFIS-exp1.jpg" alt="AFIS experiment, IOW Warnemünde">
+          <div class="gallery-caption">AFIS experiment, IOW Warnemünde</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-group">
+      <div class="gallery-group-label">Postdoc — University of Florida (2017–2020)</div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/Postdoc2_University-of-Florida/UF-flow%20cytometry-2018.png" alt="Flow cytometry, UF FLREC 2018">
+          <div class="gallery-caption">Flow cytometry, UF FLREC 2018</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/Postdoc2_University-of-Florida/UniversityofFlorida-2019.png" alt="University of Florida, 2019">
+          <div class="gallery-caption">University of Florida, 2019</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/Postdoc2_University-of-Florida/IRMA.jpg" alt="Hurricane Irma fieldwork, Everglades">
+          <div class="gallery-caption">Hurricane Irma fieldwork, Everglades</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-group">
+      <div class="gallery-group-label">COVID-19 Wastewater Surveillance (2020–2023)</div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/wastewater-SARS-CoV/IMG_20210219_105950.jpg" alt="Early surveillance setup, 2021">
+          <div class="gallery-caption">Early surveillance setup, 2021</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/wastewater-SARS-CoV/IMG_20210309_100923%20(2).jpg" alt="Sampling, spring 2021">
+          <div class="gallery-caption">Sampling, spring 2021</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/wastewater-SARS-CoV/IMG_20210518_104213.jpg" alt="Wastewater surveillance lab">
+          <div class="gallery-caption">Wastewater surveillance lab</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/wastewater-SARS-CoV/IMG_20210804_133304.jpg" alt="Sample processing">
+          <div class="gallery-caption">Sample processing</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/wastewater-SARS-CoV/IMG_20210831_112613.jpg" alt="Lab work, SARS-CoV-2 analysis">
+          <div class="gallery-caption">Lab work, SARS-CoV-2 analysis</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/wastewater-SARS-CoV/UT220221AT016.jpg" alt="Wastewater sampling equipment">
+          <div class="gallery-caption">Wastewater sampling equipment</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/pastwork-%20animated-illustration-multichannel-pipet.gif" alt="Lab animation — multichannel pipette">
+          <div class="gallery-caption">Lab animation — multichannel pipette</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-group">
+      <div class="gallery-group-label">UrbanSplash &amp; Current Work (2020–Present)</div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/current-work-illustration.jpg" alt="Current research illustration">
+          <div class="gallery-caption">Current research</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/UrbanSplash-ongoing/Peeter-in-lab-isolating-fecal-indicator-bacteria.jpg" alt="Isolating fecal indicator bacteria">
+          <div class="gallery-caption">Isolating fecal indicator bacteria</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/UrbanSplash-ongoing/petri1.jpg" alt="Fecal indicator bacteria cultures">
+          <div class="gallery-caption">Fecal indicator bacteria cultures</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/UrbanSplash-ongoing/IoT-connected_sensors-ColiMinder-autosampler.jpg" alt="IoT sensor network">
+          <div class="gallery-caption">IoT-connected sensors, ColiMinder autosampler</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/UrbanSplash-ongoing/ColiMInder-autoanalyser-UrbanSplash-2025-09.png" alt="ColiMinder autoanalyser, 2025">
+          <div class="gallery-caption">ColiMinder autoanalyser, 2025</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/UrbanSplash-ongoing/IMG_20250401_170602.jpg" alt="Lab work, UrbanSplash">
+          <div class="gallery-caption">Lab work, UrbanSplash</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/UrbanSplash-ongoing/Screenshot%20from%202026-02-11%2014-52-26.png" alt="UrbanSplash monitoring data">
+          <div class="gallery-caption">UrbanSplash monitoring data</div>
+        </div>
+      </div>
     </div>
   </section>
 
