@@ -62,13 +62,15 @@
   .sidebar-avatar {
     width: 64px; height: 64px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent2), var(--accent));
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--serif);
-    font-size: 1.6rem;
-    color: #0d0f14;
     margin-bottom: 1rem;
     position: relative;
+    overflow: hidden;
+  }
+  .sidebar-avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
   }
   .sidebar-avatar::after {
     content: '';
@@ -159,19 +161,32 @@
   }
 
   .sidebar-socials {
-    padding: 1.5rem 2rem 0;
+    padding: 1.5rem 2rem 1.5rem;
     border-top: 1px solid var(--border);
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.9rem;
     margin-top: auto;
+  }
+  .sidebar-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .sidebar-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
   }
   .sidebar-socials a {
     color: var(--text-dim);
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-family: var(--mono);
     text-decoration: none;
     transition: color 0.2s;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
   }
   .sidebar-socials a:hover { color: var(--accent); }
 
@@ -466,6 +481,13 @@
     white-space: nowrap;
     padding-top: 0.15rem;
   }
+  .collab-detail {
+    font-size: 0.74rem;
+    color: var(--text-dim);
+    margin-top: 0.35rem;
+    line-height: 1.55;
+    font-style: italic;
+  }
 
   /* ───── EVENTS ───── */
   .event-item {
@@ -515,6 +537,35 @@
     font-size: 0.75rem;
     color: var(--text-muted);
     margin-top: 0.2rem;
+    font-style: italic;
+  }
+
+  /* ───── PRESENTATIONS ───── */
+  .pres-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1.5rem;
+  }
+  .pres-date {
+    font-family: var(--mono);
+    font-size: 0.67rem;
+    color: var(--text-dim);
+    text-align: right;
+    padding-top: 0.2rem;
+    line-height: 1.4;
+  }
+  .pres-title {
+    font-size: 0.87rem;
+    color: var(--heading);
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+    line-height: 1.4;
+  }
+  .pres-venue {
+    font-size: 0.76rem;
+    color: var(--text-muted);
     font-style: italic;
   }
 
@@ -610,7 +661,9 @@
 
 <nav id="sidebar">
   <div class="sidebar-profile">
-    <div class="sidebar-avatar">PL</div>
+    <div class="sidebar-avatar">
+      <img src="assets/images/profile.png" alt="Peeter Laas">
+    </div>
     <div class="sidebar-name">Peeter Laas</div>
     <div class="sidebar-title">Research Fellow<br>Molecular Ecology</div>
     <span class="sidebar-tag">PhD · Gene Technology</span>
@@ -632,15 +685,26 @@
     <li><a href="#" data-section="events">
       <span class="nav-icon">◆</span> Events & Honours
     </a></li>
+    <li><a href="#" data-section="presentations">
+      <span class="nav-icon">◎</span> Presentations
+    </a></li>
     <li><a href="#" data-section="gallery">
       <span class="nav-icon">◧</span> Gallery
     </a></li>
   </ul>
 
   <div class="sidebar-socials">
-    <a href="https://scholar.google.com" target="_blank">Scholar</a>
-    <a href="https://www.etis.ee" target="_blank">ETIS</a>
-    <a href="assets/CV_2026-02-15.pdf" target="_blank">CV ↗</a>
+    <div class="sidebar-contact">
+      <a href="mailto:peeter.laas@ut.ee">peeter.laas@ut.ee</a>
+      <a href="mailto:peeter.laas@taltech.ee">peeter.laas@taltech.ee</a>
+      <a href="https://x.com/DrPeeterLaas" target="_blank">𝕏 @DrPeeterLaas</a>
+      <a href="https://www.linkedin.com/in/peeter-laas-50a51913/" target="_blank">in LinkedIn ↗</a>
+    </div>
+    <div class="sidebar-links">
+      <a href="https://scholar.google.com" target="_blank">Scholar</a>
+      <a href="https://www.etis.ee" target="_blank">ETIS</a>
+      <a href="assets/CV_2026-02-15.pdf" target="_blank">CV ↗</a>
+    </div>
   </div>
 </nav>
 
@@ -817,6 +881,87 @@
       <h2>Education &amp; Positions</h2>
     </div>
 
+    <div class="sub-heading">Employment History</div>
+
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">TalTech – Tallinn University of Technology</div>
+        <div class="collab-role">Research Fellow in Molecular Ecology · 0.8 position</div>
+      </div>
+      <div class="collab-period">2020 – Present</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">University of Tartu, Institute of Technology</div>
+        <div class="collab-role">Research Fellow in Molecular Ecology · 0.2 position · Part-time</div>
+        <div class="collab-detail">Projects: "Development of surveillance system of SARS-CoV-2 based on waste water analysis" (2021–2022); "Development of tools to sequence SARS-CoV-2 from wastewater samples" (2024); "COMplex Biofilms and AMR Transmission" (2021–2024)</div>
+      </div>
+      <div class="collab-period">2021 – Present</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">Tallinn University</div>
+        <div class="collab-role">Lecturer · Contract — "Modern Molecular Methods in Ecology"</div>
+      </div>
+      <div class="collab-period">2020 – Present</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">Kliimaministeerium / Ministry of Climate of Estonia</div>
+        <div class="collab-role">Advisory Committee Member · Gene Technology Committee</div>
+      </div>
+      <div class="collab-period">2011 – Present</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">Klaipeda University</div>
+        <div class="collab-role">Chief Research Scientist · Part-time</div>
+      </div>
+      <div class="collab-period">Jul 2024 – Jan 2025</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">University of Florida Institute of Food and Agricultural Sciences</div>
+        <div class="collab-role">Postdoctoral Research Associate · Fort Lauderdale Research and Education Center</div>
+      </div>
+      <div class="collab-period">2017 – 2020</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">TalTech – Tallinn University of Technology</div>
+        <div class="collab-role">Scientific Researcher</div>
+      </div>
+      <div class="collab-period">Apr – Jun 2017</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">Leibniz Institute for Baltic Sea Research Warnemünde</div>
+        <div class="collab-role">Postdoctoral Associate</div>
+      </div>
+      <div class="collab-period">2016 – 2017</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">Tallinn University of Technology</div>
+        <div class="collab-role">Junior Researcher</div>
+      </div>
+      <div class="collab-period">2013 – 2016</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">Tallinn University of Technology</div>
+        <div class="collab-role">Engineer</div>
+      </div>
+      <div class="collab-period">2010 – 2012</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">University of Tartu</div>
+        <div class="collab-role">Research Assistant</div>
+      </div>
+      <div class="collab-period">2009 – 2010</div>
+    </div>
+
     <div class="sub-heading">Degrees</div>
 
     <div class="edu-item">
@@ -840,37 +985,6 @@
         <div class="edu-degree">BSc in Gene Technology</div>
         <div class="edu-inst">University of Tartu</div>
       </div>
-    </div>
-
-    <div class="sub-heading">Positions & Collaborations</div>
-
-    <div class="collab-item">
-      <div>
-        <div class="collab-name">University of Tartu</div>
-        <div class="collab-role">Research Fellow in Molecular Ecology · Institute of Technology</div>
-      </div>
-      <div class="collab-period">2021 – Present</div>
-    </div>
-    <div class="collab-item">
-      <div>
-        <div class="collab-name">TalTech FinEst Centre for Smart Cities</div>
-        <div class="collab-role">Research Fellow</div>
-      </div>
-      <div class="collab-period">2025 – Present</div>
-    </div>
-    <div class="collab-item">
-      <div>
-        <div class="collab-name">Leibniz Institute for Baltic Sea Research Warnemünde</div>
-        <div class="collab-role">Post-Doc Researcher</div>
-      </div>
-      <div class="collab-period">2016 – 2017</div>
-    </div>
-    <div class="collab-item">
-      <div>
-        <div class="collab-name">University of Florida</div>
-        <div class="collab-role">Post-Doc · Fort Lauderdale Research and Education Center</div>
-      </div>
-      <div class="collab-period">2017 – 2020</div>
     </div>
 
     <div class="sub-heading">Teaching</div>
@@ -925,6 +1039,424 @@
         University of Tartu Contribution to Society Award
         <span>2021 · For nation-wide SARS-CoV-2 wastewater surveillance programme</span>
       </div>
+    </div>
+  </section>
+
+  <!-- ══ PRESENTATIONS ══ -->
+  <section class="section" id="presentations">
+    <div class="section-header" data-label="Talks, Posters &amp; Teaching">
+      <h2>Presentations</h2>
+    </div>
+
+    <div class="sub-heading">Conference &amp; Seminar Presentations</div>
+
+    <div class="pres-item">
+      <div class="pres-date">30.11.2010</div>
+      <div>
+        <div class="pres-title">Introduction To Bacterial Life in the Ocean</div>
+        <div class="pres-venue">Seminar at Marine Systems Institute (MSI), Tallinn</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">13.12.2010</div>
+      <div>
+        <div class="pres-title">Mesocosm experiment LightDynaMix, HCMR Greece</div>
+        <div class="pres-venue">Centre for Biology of Integrated Systems (CBIS) &amp; MSI seminar</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">24.08.2011</div>
+      <div>
+        <div class="pres-title">Dynamics of Bacterioplankton Composition in the Gulf of Finland (Metagenomic Approach)</div>
+        <div class="pres-venue">BSSC 2011 (Baltic Sea Science Congress)</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">29.09.2011</div>
+      <div>
+        <div class="pres-title">Spatial Variability of Winter Bacterioplankton Communities in the Gulf of Finland</div>
+        <div class="pres-venue">CBIS seminar</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">17.04.2012</div>
+      <div>
+        <div class="pres-title">Journal Club presentation</div>
+        <div class="pres-venue">TalTech, Tallinn</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">13.06.2012</div>
+      <div>
+        <div class="pres-title">Läänemere bakterplanktoni koosluste dünaamika</div>
+        <div class="pres-venue">TalTech, Tallinn</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">07.11.2012</div>
+      <div>
+        <div class="pres-title">Flow cytometry in marine microbiology</div>
+        <div class="pres-venue">Eesti FACSi kasutajate konverents (Estonian FACS users conference)</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">26.04.2013</div>
+      <div>
+        <div class="pres-title">GTI presentation</div>
+        <div class="pres-venue">Institute of Gene Technology seminar</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">17.10.2013</div>
+      <div>
+        <div class="pres-title">Spatiotemporal patterns of bacterioplankton in the Gulf of Finland</div>
+        <div class="pres-venue">TalTech MSI seminar, Tallinn</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">29.10.2013</div>
+      <div>
+        <div class="pres-title">JProteorhodopsin</div>
+        <div class="pres-venue">JC, Tallinn</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">28.02.2014</div>
+      <div>
+        <div class="pres-title">The Dynamics of 'Smallest Bugs' in the Gulf of Finland (Baltic Sea)</div>
+        <div class="pres-venue">OSM 2014 (Ocean Sciences Meeting, Hawai, USA)</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">09.06.2014</div>
+      <div>
+        <div class="pres-title">Laanemere bakterplanktoni koosluste duunaamika (Atesteerimine)</div>
+        <div class="pres-venue">ATT 2014, TalTech</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">01.10.2014</div>
+      <div>
+        <div class="pres-title">Spatiotemporal dynamics of bacterioplankton in the Gulf of Finland</div>
+        <div class="pres-venue">IOW (Leibniz Institute for Baltic Sea Research), Warnemünde</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">17.10.2014</div>
+      <div>
+        <div class="pres-title">Elust maal ja merel</div>
+        <div class="pres-venue">Seminar, Tallinn</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">18.11.2014</div>
+      <div>
+        <div class="pres-title">The bacterioplankton of the Gulf of Finland — 'gold mine' of biodiversity?</div>
+        <div class="pres-venue">Presentation, Tallinn</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">31.03.2015</div>
+      <div>
+        <div class="pres-title">Läänemere bakterplankton</div>
+        <div class="pres-venue">Seminar, MSI</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">Jun 2015</div>
+      <div>
+        <div class="pres-title">Single-cell genomics of the Baltic Sea microbes</div>
+        <div class="pres-venue">eCOST STSM report, Brussels</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">05.07.2016</div>
+      <div>
+        <div class="pres-title">Spatiotemporal niche-partitioning of bacterioplankton community across environmental gradients in the Baltic Sea</div>
+        <div class="pres-venue">PhD defence, TTU Tallinn</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">11.01.2017</div>
+      <div>
+        <div class="pres-title">Spatiotemporal dynamics of bacterioplankton community in the Gulf of Finland and ideas for future</div>
+        <div class="pres-venue">Biology Section Seminar, IOW Warnemünde</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">23.03.2017</div>
+      <div>
+        <div class="pres-title">What Peeter did in Germany?!</div>
+        <div class="pres-venue">MSI seminar, Tallinn</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">06.04.2017</div>
+      <div>
+        <div class="pres-title">Laanemere bakterite identifitseerimine DNA pohjal</div>
+        <div class="pres-venue">Eesti veepaevakonverents</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">02.11.2017</div>
+      <div>
+        <div class="pres-title">Surgeonfish gut microbiology</div>
+        <div class="pres-venue">University of Florida, IFAS, Fort Lauderdale</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">10.04.2018</div>
+      <div>
+        <div class="pres-title">The Everglades</div>
+        <div class="pres-venue">UF IFAS FLREC lab meeting, Fort Lauderdale</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">Apr 2019</div>
+      <div>
+        <div class="pres-title">Effects of Hurricane Irma on Aquatic Microbial Communities of the Everglades</div>
+        <div class="pres-venue">GEER 2019 (Greater Everglades Ecosystem Restoration)</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">04.11.2020</div>
+      <div>
+        <div class="pres-title">VHK presentation</div>
+        <div class="pres-venue">VHK seminar</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">20.01.2022</div>
+      <div>
+        <div class="pres-title">Building up the early warning surveillance of SARS-CoV-2 based on wastewater analysis</div>
+        <div class="pres-venue">UF seminar, University of Tartu</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">16.03.2022</div>
+      <div>
+        <div class="pres-title">Bacterial communities in ballast tanks of cargo vessels</div>
+        <div class="pres-venue">mereRITA seminar</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">08.09.2022</div>
+      <div>
+        <div class="pres-title">BSNCN meeting presentation</div>
+        <div class="pres-venue">BSNCN (Baltic Sea Nitrogen Cycling Network)</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">20.01.2023</div>
+      <div>
+        <div class="pres-title">Microbial cocktails we mix in the sea</div>
+        <div class="pres-venue">TUTI konverents, University of Tartu</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">31.01.2023</div>
+      <div>
+        <div class="pres-title">Reovesi kui ühiskonna hingepeegel — SARS-CoV-2 reoveeseire Eestis</div>
+        <div class="pres-venue">Luts seminar</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">08.03.2024</div>
+      <div>
+        <div class="pres-title">Microbiome of Limecola balthica</div>
+        <div class="pres-venue">Seminar, University of Tartu</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">26.03.2024</div>
+      <div>
+        <div class="pres-title">Microbial diversity in/on Fe-Mn concretions together with associated sediments and water</div>
+        <div class="pres-venue">Tallinn</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">19.04.2024</div>
+      <div>
+        <div class="pres-title">Science4Policy — Short Brief on UrbanSplash project proposal</div>
+        <div class="pres-venue">Science4Policy presentation</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">23.04.2024</div>
+      <div>
+        <div class="pres-title">COMBAT project: Putting Biofilms in the Tube</div>
+        <div class="pres-venue">COMBAT meeting</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">24.04.2024</div>
+      <div>
+        <div class="pres-title">COMBAT project: Amplicon Sequencing-Based Data Analyses</div>
+        <div class="pres-venue">COMBAT meeting</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">25.04.2024</div>
+      <div>
+        <div class="pres-title">UrbanSplash Short Brief</div>
+        <div class="pres-venue">UrbanSplash meeting, Tartu/Dublin</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">25.09.2024</div>
+      <div>
+        <div class="pres-title">FeMn concretions in the Gulf of Finland</div>
+        <div class="pres-venue">Manuscript seminar, University of Tartu</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">16.10.2024</div>
+      <div>
+        <div class="pres-title">MHK presentation</div>
+        <div class="pres-venue">MHK seminar</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">22.10.2024</div>
+      <div>
+        <div class="pres-title">Treasure under the sea: microbial communities associated with ferromanganese nodules in the Gulf of Finland</div>
+        <div class="pres-venue">Seminar, Tenson Lab</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">09.01.2025</div>
+      <div>
+        <div class="pres-title">Microbial Marvels: From the Baltic Sea to Subtropical Frontiers in Ecology and Biomedicine</div>
+        <div class="pres-venue">Florida Atlantic University Harbor Branch Oceanographic Institute seminar</div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Posters</div>
+
+    <div class="pres-item">
+      <div class="pres-date">Nov 2012</div>
+      <div>
+        <div class="pres-title">Spatial and temporal shifts of picoplankton abundance and bacterioplankton diversity in the Gulf of Finland</div>
+        <div class="pres-venue">Eesti Mereteadus 2012</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">Aug 2013</div>
+      <div>
+        <div class="pres-title">Spatiotemporal patterns of bacterioplankton in the Gulf of Finland</div>
+        <div class="pres-venue">SAME 13 (Symposium on Aquatic Microbial Ecology)</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">Nov 2014</div>
+      <div>
+        <div class="pres-title">Phytoplankton and bacterioplankton communities in the Gulf of Finland</div>
+        <div class="pres-venue">Barcelona 2014</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">Oct 2015</div>
+      <div>
+        <div class="pres-title">Laanemere mikroobikooslused — bioloogiline kullavaramu</div>
+        <div class="pres-venue">BPjaBT 2015</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">2017</div>
+      <div>
+        <div class="pres-title">Seagrass microbiome</div>
+        <div class="pres-venue">Poster/figure</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">2022</div>
+      <div>
+        <div class="pres-title">Hybrid assembly of Nanopore and Illumina reads — solving fragmented de novo assembly of resistant bacterial genomes</div>
+        <div class="pres-venue">OHEJPASM 2022</div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Teaching &amp; Lectures</div>
+
+    <div class="pres-item">
+      <div class="pres-date">21.03.2014</div>
+      <div>
+        <div class="pres-title">Mikroobid (bakterid, arhed ja viirused) meres</div>
+        <div class="pres-venue">Lecture, TTU MSI</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">09.05.2014</div>
+      <div>
+        <div class="pres-title">Oekoloogilise mikrobioloogia praktikum</div>
+        <div class="pres-venue">TLU practical course</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">13.05.2015</div>
+      <div>
+        <div class="pres-title">Molecular ecology practical</div>
+        <div class="pres-venue">TLU practical course</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">2016</div>
+      <div>
+        <div class="pres-title">Bakterid meres</div>
+        <div class="pres-venue">Presentation for students</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">2017</div>
+      <div>
+        <div class="pres-title">Molecular ecology practical</div>
+        <div class="pres-venue">TLU practical course</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">20.10.2020</div>
+      <div>
+        <div class="pres-title">Mikroorganismid ja merekeskkond</div>
+        <div class="pres-venue">Opetajate koolitus, TalTech</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">2023</div>
+      <div>
+        <div class="pres-title">Environmental microbiology + ONT nanopore sequencing</div>
+        <div class="pres-venue">University of Tartu · LTTI.00.017</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-date">2024</div>
+      <div>
+        <div class="pres-title">Environmental microbiology — Contemporary Lab Techniques</div>
+        <div class="pres-venue">University of Tartu · LTTI.00.017</div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Supervised Student Presentations</div>
+
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">Spatio-temporal variation of bacterioplankton community composition across vertical clines in the Gulf of Finland</div>
+        <div class="collab-role">Elina Satova · MSc defence · co-sup. Inga Lips</div>
+      </div>
+      <div class="collab-period">2015</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">Bakterplanktoni koosluse ajalis-ruumiline muutlikkus labi vertikaalsete huppekihtide Soome lahes</div>
+        <div class="collab-role">Līva Kristiāna Lukaša · MSc defence · co-sup. Veljo Kisand</div>
+      </div>
+      <div class="collab-period">2024</div>
+    </div>
+    <div class="collab-item">
+      <div>
+        <div class="collab-name">Initial bacterial colonization of the marine plastisphere</div>
+        <div class="collab-role">Karolin Kullison · MSc defence · co-sup. Natalja Buhhalko</div>
+      </div>
+      <div class="collab-period">2025</div>
     </div>
   </section>
 
